@@ -1,0 +1,111 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Barhoppr</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css"/>
+	<link rel="stylesheet" href="css/themes/home-theme.css" />
+  	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.raty.css">
+	<link rel="stylesheet" href="css/home.css"/>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+	<script src="parse-1.2.19.min.js"></script>
+	<script src="jquery.raty.js"></script>
+	<script src="home.js"></script>
+</head>
+<body>
+	<div data-role="page">
+		<div data-role="panel" id="mypanel">
+    		<h1 id="leaderBoardTitle">Weekly Leaderboard</h1>
+    		<ol id="rankings"></ol>
+    		<p id="userScore"><u>Your Weekly Points:</u> <p>
+    		<table><tbody>
+				<span>Want to change your username?</span>
+				<form method="post" id="changeUsernameForm">
+					<tr>
+						<td>New Username:</td>
+						<td><input type="text" name="newUsername" id="newUsername"></td>
+					</tr>
+					<tr><td colspan="2"><input type="submit" value="Change" id="changeUsernameBtn"></td></tr>
+				</form>
+			</tbody></table>
+  		</div>
+		<div data-role="header">
+			<a href="#mypanel" data-icon="grid" id="panelButton"></a>
+  			<h1 id="title">Barhoppr</h1>
+  			<!-- <img src="beer-on.png" id="logo"/> -->
+  			<!-- <a data-icon="plus" id="addButton"></a> -->
+		</div>
+		<div data-role="content" id="content">
+			<div data-role="collapsible-set" id="collapsibleSet">
+				<div data-role="collapsible" data-collapsed="false" data-collapsed-icon="star" data-expanded-icon="star" class="collapsible" id="cannons_collapsible">
+					<h3>
+						<span class="barTitle">Cannons</span>
+						<div class="starRating titleStarRating" id="cannons"></div>
+						<!-- <br>
+						<span class="attendingDisplay" id="cannons_attending">50 people attending<span> -->
+					</h3>
+					<p class="barAttribute">Fun <span id="cannons_fun_PO" class="plusOne hidden">+1</span></p>
+					<div class="starRating subStarRating" id="cannons_fun"></div>
+					<p class="barAttribute">Ease of Entry <span id="cannons_eoe_PO" class="plusOne hidden">+1</span></p>
+					<div class="starRating subStarRating" id="cannons_eoe"></div>
+					<p class="barAttribute">Girl:Guy <span id="cannons_sex_PO" class="plusOne hidden">+1</span></p>
+					<div class="starRating subStarRating" id="cannons_sex"></div>
+					<p class="formatClear"></p>
+				</div>
+  				<div data-role="collapsible" data-collapsed-icon="star" data-expanded-icon="star" class="collapsible" id="tt_collapsible">
+    				<h3>
+						<span class="barTitle">1020</span>
+						<div class="starRating titleStarRating" id="tt"></div>
+					</h3>	
+					<p class="barAttribute">Fun <span id="tt_fun_PO" class="plusOne hidden">+1</span></p>
+					<div class="starRating subStarRating" id="tt_fun"></div>
+					<p class="barAttribute">Ease of Entry <span id="tt_eoe_PO" class="plusOne hidden">+1</span></p>
+					<div class="starRating subStarRating" id="tt_eoe"></div>
+					<p class="barAttribute">Girl:Guy <span id="tt_sex_PO" class="plusOne hidden">+1</span></p>
+					<div class="starRating subStarRating" id="tt_sex"></div>
+					<p class="formatClear"></p>
+  				</div>
+  				<div data-role="collapsible" data-collapsed-icon="star" data-expanded-icon="star" class="collapsible" id="heights_collapsible">
+    				<h3>
+						<span class="barTitle">Heights</span>
+						<div class="starRating titleStarRating" id="heights"></div>
+					</h3>	
+					<p class="barAttribute">Fun <span id="heights_fun_PO" class="plusOne hidden">+1</span></p>
+					<div class="starRating subStarRating" id="heights_fun"></div>
+					<p class="barAttribute">Ease of Entry <span id="heights_eoe_PO" class="plusOne hidden">+1</span></p>
+					<div class="starRating subStarRating" id="heights_eoe"></div>
+					<p class="barAttribute">Girl:Guy <span id="heights_sex_PO" class="plusOne hidden">+1</span></p>
+					<div class="starRating subStarRating" id="heights_sex"></div>
+					<p class="formatClear"></p>
+  				</div>
+  				<div data-role="collapsible" data-collapsed-icon="star" data-expanded-icon="star" class="collapsible" id="mels_collapsible">
+    				<h3>
+						<span class="barTitle">Mel's</span>
+						<div class="starRating titleStarRating" id="mels"></div>
+					</h3>	
+					<p class="barAttribute">Fun <span id="mels_fun_PO" class="plusOne hidden">+1</span></p>
+					<div class="starRating subStarRating" id="mels_fun"></div>
+					<p class="barAttribute">Ease of Entry <span id="mels_eoe_PO" class="plusOne hidden">+1</span></p>
+					<div class="starRating subStarRating" id="mels_eoe"></div>
+					<p class="barAttribute">Girl:Guy <span id="mels_sex_PO" class="plusOne hidden">+1</span></p>
+					<div class="starRating subStarRating" id="mels_sex"></div>
+					<p class="formatClear"></p>
+  				</div>
+  				<div data-role="collapsible" data-collapsed-icon="star" data-expanded-icon="star" class="collapsible" id="bs_collapsible">
+    				<h3>
+						<span class="barTitle">Bernheim</span>
+						<div class="starRating titleStarRating" id="bs"></div>
+					</h3>	
+					<p class="barAttribute">Fun <span id="bs_fun_PO" class="plusOne hidden">+1</span></p>
+					<div class="starRating subStarRating" id="bs_fun"></div>
+					<p class="barAttribute">Ease of Entry <span id="bs_eoe_PO" class="plusOne hidden">+1</span></p>
+					<div class="starRating subStarRating" id="bs_eoe"></div>
+					<p class="barAttribute">Girl:Guy <span id="bs_sex_PO" class="plusOne hidden">+1</span></p>
+					<div class="starRating subStarRating" id="bs_sex"></div>
+					<p class="formatClear"></p>
+  				</div>
+			</div>
+		</div>
+	</div>
+</body>

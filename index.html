@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Barhoppr</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css"/>
+	<link rel="stylesheet" href="css/themes/login-theme.css" />
+  	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/index.css"/>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+	<script src="parse-1.2.19.min.js"></script>
+	<script src="index.js"></script>
+</head>
+<body>
+	<div data-role="page">
+		<div data-role="header">
+  			<h1 id="title">Barhoppr</h1>
+  			<!-- <img src="beer-on.png" id="logo"/> -->
+		</div>
+		<div data-role="content" id="content">
+			<table><tbody>
+				<form method="post" id="signup_form">
+					<tr>
+						<td>Name:</td>
+						<td><input type="text" name="first" id="name"></td>
+					</tr>
+					<tr>
+						<td>Hoppr Alias:</td>
+						<td><input type="text" name="last" id="alias"></td>
+					</tr>
+					<tr>
+						<td>Columbia Email:</td>
+						<td><input type="text" name="email" id="email" value="@columbia.edu"></td>
+					</tr>
+					<tr>
+						<td>Gender:</td>
+						<td>
+							<select name="gender" id="gender">
+								<option value="Male">Male</option>
+								<option value="Female">Female</option>
+							</select>
+						</td>
+					</tr>
+					<tr><td colspan="2"><input type="submit" value="Sign up" id="signupButton"></td></tr>
+				</form>
+			</tbody></table>
+		</div>
+	</div>
+</body>

@@ -1,0 +1,92 @@
+/*
+	Blue:#0099FF
+	Pink:#ed1e79
+	Purple:#7900BB
+*/
+
+#leaderBoardTitle{
+	margin-bottom:0em;
+}
+
+#userScore{
+	margin-top:3em;
+	margin-bottom: 2em;
+}
+
+#title{
+	font-size:1.73em;
+	padding:0.25em 0em 0.3em 0em;
+}
+
+#logo{
+	/*float:right;*/
+	/*position:relative;*/
+	/*top:-2em;*/
+	/*left:5em;*/
+}
+
+#panelButton{
+	padding:2em 1.6em 0.7em 1em;
+	margin-top:0.3em;
+}
+
+.plusOne{
+	color:#F9C600;
+}
+
+#addButton{
+	padding:2em 1.6em 0.7em 1em;
+	margin-top:0.3em;
+}
+
+.ui-collapsible-heading-toggle{
+	padding-top:1.1em;
+}
+
+#content{
+	padding:0em 0.2em 0em 0.2em;
+	/*background-color:#D8D8D8;*/
+}
+
+#collapsibleSet{
+	margin:0.3em 0.01em 0.01em 0.01em;
+	/*margin:-0.3em -0.2em 0em -0.2em;*/
+}
+
+.barTitle{
+	font-size:1.3em;
+	margin-left:-0.25em;
+}
+
+.barAttribute{
+	font-size:1.1em;
+	margin:0.5em 0em 0em 0em;
+	float:left;
+	clear:both;
+	font-weight:bold;
+}
+
+.starRating{
+	float:right;
+}
+
+.titleStarRating{
+	margin:0.28em -0.7em 0em 0em;
+}
+
+.subStarRating{
+	margin:0.3em -0.7em 0.2em 0em;
+}
+
+/*.attendingDisplay{
+	font-size:0.5em;
+}*/
+
+.formatClear{
+	margin:0em;
+	clear:both;
+}
+
+.hidden{
+	display:none;
+}
